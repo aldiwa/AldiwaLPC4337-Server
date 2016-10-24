@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta http-equiv="refresh" content="1">
+    <title>{{ title }}</title>
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation" class="active">
+                        <a class="btn btn-lg btn-success" href="{{request.path}}" role="button">Atualizar</a>
+                    </li>
+                </ul>
+            </nav>
+            <h3 class="text-muted">{{ title }}</h3>
+        </div>
+        <div class="jumbotron">
+            <h2>Fluxo de Água</h2>
+            <br />
+            <h2>{{ vazaoagua }}</h2>
+            <br />
+            <h3>De {{ datahorainicio }} à {{ datahorafim }}</h3>
+            <h3>Acumulado do período: {{ fluxoperiodo }}</h3>
+            <br />
+            <h3>Última medição realizada em: {{ datahora }}</h3>
+            <h3>Valor da medição: {{ fluxoagua }}</h3>
+            <br />
+            <h4>Temperatura: </h4><h5>{{ temperatura }} °C</h5>
+            <h4>Umidade: </h4><h5>{{ umidade }}</h5>
+        </div>
+        <footer class="footer">
+            <p>&copy; {{ title }} 2016</p>
+        </footer>
+    </div>
+</body>
+</html>

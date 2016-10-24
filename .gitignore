@@ -1,0 +1,7 @@
+/vendor
+/node_modules
+.env
+.idea
+.DS_Store
+*.db
+*.pyc
